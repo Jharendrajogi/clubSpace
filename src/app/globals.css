@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Remainders</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div id="remainder">
+        <header>
+            <h2>My Remainders</h2>
+        </header>
+        <main>
+            <div class="info">
+                <h4>Cyber security session</h4>
+                <small>Feb 6 9:00 am</small>
+            </div>
+            <div class="info">
+                <h4>ML workshop</h4>
+                <small>Feb 8 9:00 am</small>
+            </div>
+            <div class="info">
+                <h4>Cyber security session</h4>
+                <small>Feb 19 9:00 am</small>
+            </div>
+        </main>
+    </div>
+
+</body>
+</html>*/
+#remainder {
+  width: 280px;
+  height: 320px;
+  border: 1px solid black;
+  background: rgb(250, 253, 254);
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  left: 600px;
+  top: 100px;
+  cursor: pointer;
+}
+header, main{
+  position: relative;
+  left: 10px;
+}
+header h2{
+  color: rgb(88, 110, 215);
+}
+h4, small{
+  margin-bottom: 0;
+  position: relative;
+  left: 10px;
+  top: 10px;
+}
+
+.info{
+  height: 60px;
+  width: 250px;
+  margin-bottom: 0;
+  margin-top: 0;
+  background-color: rgb(197, 232, 246);
+  color: rgb(75, 74, 74);
+  border-radius: 10px;
+}
